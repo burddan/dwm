@@ -1,0 +1,14 @@
+--- dwm.c
++++ dwm.c
+@@ -120,6 +121,11 @@ struct Monitor {
+ 	int by;               /* bar geometry */
+ 	int mx, my, mw, mh;   /* screen size */
+ 	int wx, wy, ww, wh;   /* window area  */
++	int altTabN;		  /* move that many clients forward */
++	int nTabs;			  /* number of active clients in tag */
++	int isAlt; 			  /* 1,0 */
++	int maxWTab;
++	int maxHTab;
+ 	unsigned int seltags;
+ 	unsigned int sellt;
+ 	unsigned int tagset[2];
