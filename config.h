@@ -73,7 +73,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod4Mask
+#define MODKEY Mod1Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -94,7 +94,7 @@ static const Key keys[] = {
 
         { MODKEY,                       XK_l,      focusstackvis,  {.i = +1 } },
         { MODKEY,                       XK_h,      focusstackvis,  {.i = -1 } },
-	/*{ MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
+	/*{ MODKEY,                     XK_j,      focusstackvis,  {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_j,      focusstackhid,  {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      focusstackhid,  {.i = -1 } },
@@ -131,7 +131,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_c,      quit,           {0} },
-        { MODKEY,                       XK_F5,     xrdb,           {.v = NULL } },
+        { Mod4Mask,                       XK_F5,     xrdb,           {.v = NULL } },
         { MODKEY,                       XK_Tab,    altTabStart,    {0} },
 
 };
