@@ -19,8 +19,8 @@ static const unsigned int gappov    = 15;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "BigBlueTerm437NerdFont-Regular:pixelsize=15" };
-static const char dmenufont[]       = "BigBlueTerm437NerdFont-Regular:size=12:antialias:true";
+static const char *fonts[]          = { "GohuFont11NerdFont-Regular:size=13" };
+static const char dmenufont[]       = "GohuFont11NerdFont-Regular:size=13:antialias:true";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
@@ -34,7 +34,7 @@ static char *colors[][3] = {
  };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "󰭹", "", "" };
+static const char *tags[] = { "", "", "", "", "", "", "", "", "󰨇" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -44,6 +44,8 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "obs",    NULL,       NULL,   1 << 7,     True,        0 },
+
 };
 
 /* layout(s) */
@@ -73,7 +75,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -132,7 +134,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_c,      quit,           {0} },
         { Mod4Mask,                       XK_F5,     xrdb,           {.v = NULL } },
-        { MODKEY,                       XK_Tab,    altTabStart,    {0} },
+        { Mod1Mask,                       XK_Tab,    altTabStart,    {0} },
 
 };
 
