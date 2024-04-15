@@ -111,7 +111,11 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_f,      togglefullscr,  {0} },
 
-	{ MODKEY,                      XK_r,       spawn,          SHCMD("get-rice.sh") },
+	//{ MODKEY,                      XK_r,       spawn,          SHCMD("get-rice.sh") },
+	{ MODKEY,                      XK_e,       spawn,          SHCMD("/home/burddan/packages/email_1.sh") },
+	{ MODKEY,                      XK_r,       spawn,          SHCMD("/home/burddan/packages/email_2.sh") },
+	{ MODKEY,                      XK_t,       spawn,          SHCMD("/home/burddan/packages/email_3.sh") },
+	{ MODKEY,                      XK_y,       spawn,          SHCMD("/home/burddan/packages/email_4.sh") },
 
 	{ MODKEY,                      XK_j,       spawn,          SHCMD("flameshot gui") },
 
