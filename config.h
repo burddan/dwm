@@ -118,6 +118,7 @@ static const Key keys[] = {
 	{ MODKEY,                      XK_y,       spawn,          SHCMD("/home/burddan/packages/email_4.sh") },
 
 	{ MODKEY,                      XK_j,       spawn,          SHCMD("flameshot gui") },
+	{ MODKEY,                      XK_s,       spawn,          SHCMD("slock") },
 
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
