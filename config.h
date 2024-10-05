@@ -108,7 +108,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      killclient,     {0} },
 	{ MODKEY|ControlMask,		XK_q,      cyclelayout,    {.i = -1 } },
 	{ MODKEY,	                XK_q,      cyclelayout,    {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
+	{ MODKEY,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_f,      togglefullscr,  {0} },
 
 	//{ MODKEY,                      XK_r,       spawn,          SHCMD("get-rice.sh") },
